@@ -28,7 +28,7 @@ public class LoginDAO {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/dashboard", "root", "root");
+			Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/almproject", "root", "root");
 			Statement st=con.createStatement();
 			ResultSet rs=st.executeQuery("select email, password from login");
 			
@@ -59,7 +59,7 @@ public class LoginDAO {
 	public void insert(login login) throws ClassNotFoundException, SQLException {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/dashboard", "root", "root");
+		Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/almproject", "root", "root");
 		
 		PreparedStatement stmt = con.prepareStatement("insert into login values(?,?,?,?,?)");
 		stmt.setString(1, login.getUsername());

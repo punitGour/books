@@ -4,16 +4,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.junit.Test;
-
 import com.mysql.jdbc.PreparedStatement;
 
 import model.Books;
-import model.login;
 
 public class BooksDao {
 	
@@ -21,7 +14,7 @@ public class BooksDao {
 	public Books getAll(String id) throws ClassNotFoundException, SQLException {
 		Books book = null;
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/dashboard", "root", "root");
+		Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/almproject", "root", "root");
 		
 		java.sql.PreparedStatement stmt = con.prepareStatement("select * from Books where id=?");
 	    stmt.setString(1, id);
@@ -49,7 +42,7 @@ public class BooksDao {
 public void insert(Books book) throws ClassNotFoundException, SQLException {
 		
 		Class.forName("com.mysql.jdbc.Driver");
-		Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/dashboard", "root", "root");
+		Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/almproject", "root", "root");
 		
 		java.sql.PreparedStatement stmt = con.prepareStatement("insert into books values(?,?,?,?,?,?,?)");
 		stmt.setString(1, book.getID());
@@ -68,7 +61,7 @@ public void insert(Books book) throws ClassNotFoundException, SQLException {
 public void delete(Books book) throws ClassNotFoundException, SQLException {
 	
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/dashboard", "root", "root");
+	Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/almproject", "root", "root");
 	
 	java.sql.PreparedStatement stmt = con.prepareStatement("delete from books where id=?");
 	stmt.setString(1, book.getID());
@@ -82,7 +75,7 @@ public void delete(Books book) throws ClassNotFoundException, SQLException {
 public void updateBook(Books book) throws SQLException, ClassNotFoundException {
 	
 	Class.forName("com.mysql.jdbc.Driver");
-	Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/dashboard", "root", "root");
+	Connection con= DriverManager.getConnection( "jdbc:mysql://localhost:3306/almproject", "root", "root");
     String sql = "UPDATE books SET name = ?, price = ?,author=? , publishedyear=?, discount = ?, status=? where id = ?";
      System.out.println("in update dao");
     PreparedStatement statement = (PreparedStatement) con.prepareStatement(sql);

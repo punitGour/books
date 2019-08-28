@@ -10,11 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.junit.Test;
-
 import DAO.BooksDao;
 import model.Books;
-import model.login;
 
 /**
  * Servlet implementation class AddBooks
