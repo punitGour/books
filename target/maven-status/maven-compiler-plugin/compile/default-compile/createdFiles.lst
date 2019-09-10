@@ -1,0 +1,10 @@
+model\login.class
+model\Books.class
+DAO\BooksDao.class
+DeleteBook.class
+ShowEditForm.class
+DAO\LoginDAO.class
+RegisterServlet.class
+CheckServlet.class
+UpdateBooks.class
+AddBooks.class
