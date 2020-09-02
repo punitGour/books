@@ -1,13 +1,3 @@
-FROM alpine/git as clone 
-WORKDIR /app
-RUN git clone https://github.com/spring-projects/spring-petclinic.git
+"Docker Deep-Dive
+(working with volume and persistent data , container networking , working with secrets , deploying in production with stack and services.)"
 
-FROM maven:3.5-jdk-8-alpine as build 
-WORKDIR /app
-COPY --from=clone /app/spring-petclinic /app 
-RUN mvn install
-
-FROM openjdk:8-jre-alpine
-WORKDIR /app
-COPY --from=build /app/target/spring-petclinic-1.5.1.jar /app
-CMD ["java -jar spring-petclinic-1.5.1.jar"]
