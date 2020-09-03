@@ -1,3 +1,4 @@
-"Docker Deep-Dive
-(working with volume and persistent data , container networking , working with secrets , deploying in production with stack and services.)"
+"Docker Deep-Dive (Docker Networking)
+POC - JAVA application with MVC architecture.
+POC - AWS - IAM service hands-on"
 
