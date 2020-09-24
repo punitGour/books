@@ -1,2 +1,1 @@
 
-https://teams.microsoft.com/dl/launcher/launcher.html?type=meetup-join&deeplinkId=a73ede5a-f0f5-4172-aeb4-2ae829f9f8fb&directDl=true&msLaunch=true&enableMobilePage=true&url=%2F_%23%2Fl%2Fmeetup-join%2F19%3Ameeting_MjE5NmViNTYtMzFkNS00NjU2LTg5ZTctZGExOTg2YmFmM2Y2@thread.v2%2F0%3Fcontext%3D%257b%2522Tid%2522%253a%252272f988bf-86f1-41af-91ab-2d7cd011db47%2522%252c%2522Oid%2522%253a%25221afebf90-724d-4661-851d-bfa2c67db297%2522%257d%26anon%3Dtrue&suppressPrompt=true
